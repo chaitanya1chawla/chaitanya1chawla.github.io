@@ -3,6 +3,7 @@
 
 <head>
 	<!-- <meta name=viewport content="width=800"> -->
+	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta name="generator" content="HTML Tidy for Linux/x86 (vers 11 February 2007), see www.w3.org">
 	<script type="text/javascript" src="js/hidebib.js"></script>
@@ -161,6 +162,14 @@
 	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 	})(window,document,'script','dataLayer','GTM-NLLBQLT');</script>
 	<!-- End Google Tag Manager -->
+
+	<!-- Leaflet CSS -->
+	<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+	<style>
+	  #map {
+	    height: 100vh; /* Adjust height as needed */
+	  }
+	</style>
 	
 </head>
 
@@ -181,35 +190,36 @@
 		<!-- Intro -->
 		<!-- ###################################################################### -->
 
-		<table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+		<table width="100%" align="center" border="0" cellspacing="0" cellpadding="10">
 			<tbody><tr>
-				<td width="75%" valign="middle">
+				<td width="95%" valign="middle">
 			  	<p align="center">
 					<name>Chaitanya Chawla</name>
 					<!-- <name>Chaitanya Chawla <mid><font color=#FF0000>|</font></mid> <font color=#C0C0C0>Suddhu</font></name> -->
 			  	<p align="center">
-					<font size="3"> chaitanya.chawla <font color=#FF0000>[at]</font> tum <font color=#FF0000>[dot]</font> de </font>
+					<font size="3"> <b>Email:</b> cchawla <font color=#FF0000>[at]</font> cs <font color=#FF0000>[dot]</font> cmu <font color=#FF0000>[dot]</font> edu </font>
 			  	</p>
 			  	<p>
-					<p style = "text-align:justify">I'm an ECE undergraduate student in the <A href="http://www.cit.tum.de/" target="_blank">School of Computation, Information and Technology</A> at <A href="http://www.tum.de" target="_blank"> Technical University of Munich</A>, where I have worked with <A href="https://robvis01.in.tum.de/" target="_blank"> Prof. Darius Burschka</A> and <A href="https://www.tuwien.at/en/etit/ict/asl/team/dongheui-lee" target="_blank"> Prof. Dongheui Lee</a>. My work focusses on extracting and learning skill abstractions across humans and robots. 
-			  	</p>
-						
-			  	<p>
-					<p style = "text-align:justify">
-			  		Currently I am collaborating with <A href="https://www.cs.cmu.edu/~./jeanoh/" target="_blank">Prof. Jean Oh</A> and <A href="https://tanmayshankar.github.io/" target="_blank">Tanmay Shankar</A> from Carnegie Mellon University, where I am currently working on extracting abstract representations of agent-object interactions.
+					<p style = "text-align:justify">Hi! I'm a Graduate Student Researcher at the <A href="http://www.ri.cmu.edu/" target="_blank">Robotics Institute</A> at <A href="http://www.cmu.edu/" target="_blank">Carnegie Mellon University</A>, where I am fortunate to be advised by <A href="http://www.gshi.me/" target="_blank">Prof. Guanya Shi</A>.
+						I have also worked with <A href="https://www.cs.cmu.edu/~./jeanoh/" target="_blank">Prof. Jean Oh</A> as a visiting researcher. Previously, I graduated from the Technical University of Munich, as a 4-time reciepient of the <A href="https://www.deutschlandstipendium.de/deutschlandstipendium/de/services/english/the-deutschlandstipendium-best-of-both-worlds-for-students.html" target="_blank">German National Scholarship</A>.
 			  	</p>
 				
 				<p>
 					<p style = "text-align:justify">
-			  		I have also been a part-time working student at <A href="https://www.reply.com/roboverse-reply/en/" target="_blank">Roboverse Reply GmBH</A> building applications for Boston Dynamics Spot Robot.
+						My research interests focus on learning-based robotic manipulation. Primarily, I am interested in exploring methods to incorporate human priors by learning skill representations across humans and robots.
 			  	</p> 
+				  <p style = "text-align:justify">
+					When I'm not in the lab, I am either playing badminton 🏸 or <a href="map.html" target="_blank">travelling</a>. 
+				</p> 
 
+
+		  
 			  	
 			  <p align=center>
 				<strong>
 				<a href="misc/CV/Chaitanya_Chawla_Resume.pdf" target="_blank">CV</a> &nbsp/&nbsp
+				<a href="https://scholar.google.com/citations?user=Q9zApYUAAAAJ&hl=en" target="_blank"> Google Scholar </a> &nbsp/&nbsp
 				<a href="https://github.com/chaitanya1chawla/" target="_blank"> Github </a> &nbsp/&nbsp
-				<!-- &nbsp/&nbsp -->
 				<a href="https://www.linkedin.com/in/chaitanya1chawla/" target="_blank"> LinkedIn </a> 
 				</strong>
 			  </p>
@@ -219,6 +229,7 @@
 			</td>
 		  </tr>
 		</table>
+
 
 
 
@@ -272,15 +283,49 @@
 		  <tr>
 			<td width="100%" valign="middle">
 			  <h2>Research</h2>
-				<p>I am broadly interested in deep learning methods applied to robotics. I hope to build intelligent agents that can generalize to a diverse range of real-world tasks.</p>
-				<p>
-					
-				</p>
 			</td>
 		  </tr>
 		</table>    
 
 	  <table width="100%" align="center" border="0" cellspacing="0" cellpadding="10">
+
+		<!-- ###################################################################### -->
+		<!-- HP~HP -->
+		<!-- ###################################################################### -->
+
+		<tr>
+			<td width="25%" align="center">
+				<!-- <img src='https://suddhu.github.io/midastouch-tactile/img/midastouch.gif' width="200"> -->
+				<img src='data/media/GIFS/hat.avif' width="250">
+			</td>
+			<td valign="center" width="70%">
+				<div id="summary">
+					<papertitle>
+						Humanoid Policy ~ Human Policy
+					</papertitle>                   
+					<div style="height:5px;font-size:1px;">&nbsp;</div>
+					Ri-Zhao Qiu, Shiqi Yang, Xuxin Cheng, <b><u>Chaitanya Chawla</u></b>, <br>
+					Jialong Li, Tairan He, Ge Yan, David J. Yoon, Ryan Hoque, Jian Zhang, Sha Yi, Guanya Shi, Xiaolong Wang
+					<div style="height:5px;font-size:1px;">&nbsp;</div>
+					<font color=#696969>arXiv 2025</font>
+					<!-- <font color=#696969><em>International Conference on Machine Learning</em>, July 2022</font> -->
+					<!-- <div style="height:5px;font-size:1px;">&nbsp;</div>
+					[<font color=#009933>Oral: 6% acceptance rate</font>] -->
+					<div style="height:5px;font-size:1px;">&nbsp;</div>
+					<a href="https://arxiv.org/abs/2503.13441" target="_blank">Paper</a> /
+					<a href="https://human-as-robot.github.io/" target="_blank">Website</a> /
+					<a href="https://github.com/RogerQi/human-policy" target="_blank">Code</a>	/		
+					<a href="https://huggingface.co/datasets/RogerQi/PH2D" target="_blank">Dataset</a>		
+					<div style="height:15px;font-size:1px;">&nbsp;</div>
+				</div>
+				<div id="detail">
+				<i>
+					<p><p style = "text-align:justify">
+						Egocentric human demonstrations as a data source for humanoid manipulation.					</p>
+				</div>
+			</td>
+		</tr> 
+
 
 		<!-- ###################################################################### -->
 		<!-- LIA -->
@@ -289,7 +334,7 @@
 		<tr>
 			<td width="25%" align="center">
 				<!-- <img src='https://suddhu.github.io/midastouch-tactile/img/midastouch.gif' width="200"> -->
-				<img src='https://github.com/tanmayshankar/tanmayshankar.github.io/blob/master/data/media/GIFS/LIA3.gif?raw=true' width="300">
+				<img src='https://github.com/tanmayshankar/tanmayshankar.github.io/blob/master/data/media/GIFS/LIA3.gif?raw=true' width="250">
 			</td>
 			<td valign="center" width="70%">
 				<div id="summary">
@@ -297,12 +342,9 @@
 						Translating Agent-Environment Interactions across Humans and Robots
 					</papertitle>                   
 					<div style="height:5px;font-size:1px;">&nbsp;</div>
-					<a href="https://tanmayshankar.github.io/" target="_blank">T. Shankar</a>,
-					<u>C. Chawla</u>,
-					<a href="https://www.linkedin.com/in/almutwakel/" target="_blank">A. Hassan</a>
-					<a href="https://www.cs.cmu.edu/~./jeanoh/" target="_blank">J. Oh</a>
+					Tanmay Shankar, <b><u>Chaitanya Chawla</u></b>, Almut Wakel, Jean Oh
 					<div style="height:5px;font-size:1px;">&nbsp;</div>
-					<font color=#696969>In Submission to International Conference on Robotics and Automation, ICRA 2024</font>
+					<font color=#696969>International Conference on Intelligent Robots and Systems,<br> IROS 2024</font>
 					<!-- <font color=#696969><em>International Conference on Machine Learning</em>, July 2022</font> -->
 					<!-- <div style="height:5px;font-size:1px;">&nbsp;</div>
 					[<font color=#009933>Oral: 6% acceptance rate</font>] -->
@@ -339,16 +381,16 @@
 						Robot-Agnostic Framework for One-Shot Intrinsic Feature Extraction
 					</papertitle>                   
 					<div style="height:5px;font-size:1px;">&nbsp;</div>
-					<u>C. Chawla</u>,
-					<a href="https://mvp.in.tum.de/group/AndreiCostinescu/Projects.html" target="_blank">A. Costinescu</a>,
-					<a href="https://robvis01.in.tum.de/" target="_blank">D. Burschka</a>
+					<b><u>Chaitanya Chawla</u></b>,
+					Andrei Costinescu,
+					Darius Burschka
 					<div style="height:5px;font-size:1px;">&nbsp;</div>
 					<font color=#696969>In Preparation for IEEE Transactions on Knowledge and Data Engineering</font>
 					<!-- <font color=#696969><em>International Conference on Machine Learning</em>, July 2022</font> -->
 					<!-- <div style="height:5px;font-size:1px;">&nbsp;</div>
 					[<font color=#009933>Oral: 6% acceptance rate</font>] -->
 					<div style="height:5px;font-size:1px;">&nbsp;</div>
-					<a href="https://docs.google.com/document/d/1zetSly8f20OwUhQXxFkpWk6zb986jZu9BTgCe9vSeDs/edit?usp=sharing"_blank">Report</a> /
+					<a href="data/papers/Engineering Practice Report_Teil2.pdf"_blank">Report</a> /
 					<a href="https://docs.google.com/presentation/d/12YaqSte1F89_JjmZDsD0nDf6DWaXGfhfoEOrX2WlGs0/edit?usp=sharing" target="_blank">Presentation</a> /
 					<a href="https://github.com/chaitanya1chawla/feat_extr_new" target="_blank">Code</a>					
 					<div style="height:15px;font-size:1px;">&nbsp;</div>
@@ -376,18 +418,18 @@
 			<td valign="center" width="70%">
 				<div id="summary">
 					<papertitle>
-					Visual Teleoperation using Learning from Demonstration
+					Visual Teleoperation using Dynamic Motion Primitives
 					</papertitle>                   
 					<div style="height:5px;font-size:1px;">&nbsp;</div>
-					<u>C. Chawla</u>,
-					<a href="https://www.tuwien.at/en/etit/ict/asl/team/dongheui-lee" target="_blank">D. Lee</a>
+					<b><u>Chaitanya Chawla</u></b>,
+					Dongheui Lee
 					<div style="height:5px;font-size:1px;">&nbsp;</div>
 					<font color=#696969>Independent Research Project</font>
 					<!-- <font color=#696969><em>International Conference on Machine Learning</em>, July 2022</font> -->
 					<!-- <div style="height:5px;font-size:1px;">&nbsp;</div>
 					[<font color=#009933>Oral: 6% acceptance rate</font>] -->
 					<div style="height:5px;font-size:1px;">&nbsp;</div>
-					<a href="https://drive.google.com/file/d/1J3d_s8UPe0G96deANG6ytYEonY-YmYuY/view?usp=sharing" target="_blank">Report</a> /
+					<a href="data/papers/Visual_teleoperation_report.pdf" target="_blank">Report</a> /
 					<a href="https://1drv.ms/p/c/bd9b89aec3b8be04/EQS-uMOuiZsggL2LAgAAAAABL5bv_Bw5HzWlxLbqeCI6QA?e=TYvaWK" target="_blank">Presentation</a> /
 					<a href="https://github.com/chaitanya1chawla/Franka-Panda-Manipulation-via-Learning-from-demonstration" target="_blank">Code</a>					
 					<div style="height:15px;font-size:1px;">&nbsp;</div>
@@ -424,7 +466,76 @@
 		<!-- Face Recognition -->
 		<!-- ###################################################################### -->
 
-		  <tr>
+		<tr>
+			<td width="25%" align="center">
+				<img src="data/media/GIFS/all_chairs.gif" width="200">
+			</td>
+			<td valign="center" width="70%">
+				<div id="summary">
+					<papertitle>				
+						Fine-tuning Pre-Grasps through 3D Object Generation
+					</papertitle>                   
+					<div style="height:5px;font-size:1px;">&nbsp;</div>
+					<b><u>Chaitanya Chawla</u></b>,
+					Almut Wakel, Eyob Dagnachew
+					<div style="height:5px;font-size:1px;">&nbsp;</div>
+					<font color=#696969>10-623: Carnegie Mellon University</font>
+					<div style="height:5px;font-size:1px;">&nbsp;</div>
+					<a href="data/papers/Final_report__10623.pdf"  target="_blank">Report</a> /
+					<a href="https://github.com/almutwakel/3d-diffusion"  target="_blank">Code</a> /
+					<a href="data/papers/10623 presentation.pdf"  target="_blank">Presentation</a>
+					<div style="height:15px;font-size:1px;">&nbsp;</div>
+				</div>
+				<div id="detail">
+				<i>
+					Comparing different methods including Autoencoders and PCA, for feature representation in face reconstruction 
+				</div>
+			</td>
+		</tr> 
+
+
+		<!-- ###################################################################### -->
+		<!-- HOP -->
+		<!-- ###################################################################### -->
+			<tr>
+				<td width="25%" align="center">
+					<img src="data/media/GIFS/combined.gif" width="250">
+				</td>
+				<td valign="center" width="70%">
+					<div id="summary">
+						<papertitle>				
+							Learning Dexterous Manipulation from Human Video Pretraining using 3D Point Tracks
+						</papertitle>                   
+						<div style="height:5px;font-size:1px;">&nbsp;</div>
+						<b><u>Chaitanya Chawla</u></b>,
+						Sungjae Park, Lucas Wu, Junkai Huang, Yanbo Xu
+						<div style="height:5px;font-size:1px;">&nbsp;</div>
+						<font color=#696969>16-831: Carnegie Mellon University</font>
+						<!-- <font color=#696969><em>International Conference on Machine Learning</em>, July 2022</font> -->
+						<!-- <div style="height:5px;font-size:1px;">&nbsp;</div>
+						[<font color=#009933>Oral: 6% acceptance rate</font>] -->
+						<div style="height:5px;font-size:1px;">&nbsp;</div>
+						<a href="data/papers/IntroRobot_Project_ (1).pdf"  target="_blank">Report</a> /
+						<a href="https://docs.google.com/presentation/d/1pnNjWGP6yWjrb_LHGNiWlOL8GEl1xVN43btW0dD-Z9Y/edit?slide=id.g3263b5c167b_0_0#slide=id.g3263b5c167b_0_0"  target="_blank">Presentation</a>
+						<!-- <a href="https://github.com/tanmayshankar/RCNN_MDP" target="_blank">Code</a> 	-->
+						<div style="height:15px;font-size:1px;">&nbsp;</div>
+					</div>
+					<div id="detail">
+					<i>
+						We proposed a pipeline to benchmark pre-training methods using different state representations.
+						Our method consisted of extracting sensorimotor information from videos by lifting the human hand and the manipulated object in a
+						shared 3D space in simulation (IsaacGym), i.e. either 3D point-tracks or 3D meshes.
+						Then, we retarget hand-trajectories to a Franka with a Shadow hand.
+						Finally, we fine-tune on various tasks.
+					</div>
+				</td>
+			</tr> 
+
+		<!-- ###################################################################### -->
+		<!-- Face Recognition -->
+		<!-- ###################################################################### -->
+
+		<tr>
 			<td width="25%" align="center">
 				<img src="misc/face_reconstruction.png" width="300">
 			</td>
@@ -434,15 +545,12 @@
 						Face Recognition using Autoencoders and PCA
 					</papertitle>                   
 					<div style="height:5px;font-size:1px;">&nbsp;</div>
-					<u>C. Chawla</u><a>, K. Brenner</a>
+					<b><u>Chaitanya Chawla</u></b>,
+					Katherine Brenner
 					<div style="height:5px;font-size:1px;">&nbsp;</div>
-					<font color=#696969>Course Project</font>
-					<!-- <font color=#696969><em>International Conference on Machine Learning</em>, July 2022</font> -->
-					<!-- <div style="height:5px;font-size:1px;">&nbsp;</div>
-					[<font color=#009933>Oral: 6% acceptance rate</font>] -->
+					<font color=#696969>7-835: Technical University of Munich</font>
 					<div style="height:5px;font-size:1px;">&nbsp;</div>
-					<a href="https://drive.google.com/file/d/1i4J1-dCMb8bOxTMC5gHboNliKuqBy0d_/view?usp=sharing"  target="_blank">Paper</a>
-					<!-- <a href="https://github.com/tanmayshankar/RCNN_MDP" target="_blank">Code</a> 	-->
+					<a href="https://drive.google.com/file/d/1i4J1-dCMb8bOxTMC5gHboNliKuqBy0d_/view?usp=sharing"  target="_blank">Report</a>
 					<div style="height:15px;font-size:1px;">&nbsp;</div>
 				</div>
 				<div id="detail">
@@ -458,7 +566,7 @@
 
 		<tr>
 			<td width="25%" align="center">
-				<img src='https://github.com/chaitanya1chawla/chaitanya1chawla.github.io/blob/master/data/media/GIFS/halloween_candy_robot.gif?raw=true' width="300", height="300">
+				<img src='https://github.com/chaitanya1chawla/chaitanya1chawla.github.io/blob/master/data/media/GIFS/halloween_candy_robot.gif?raw=true' width="250", height="220">
 			</td>
 			<td valign="center" width="70%">
 				<div id="summary">
@@ -490,8 +598,49 @@
 	<hr>
 	<br>
 
-	<h2>Teaching Assistantships </h2>
-	<h3>At TU Munich:-</h3>
+	<h2>Work Experience</h2>
+
+	<div class="experience">
+		<!-- <h3>Robotics Engineer (Part-Time)</h3> -->
+		<p><a href="https://www.reply.com/roboverse-reply/en" target="_blank">Roboverse Reply</a> | July 2023 - April 2024</p>
+		
+		<ul>
+		  <li>Developed a perception pipeline for detecting and reporting measurements from analog gauges. Set up data-annotation, post-processing, and real-time inference of gauge measurements. Dockerized the application to integrate with Boston Dynamics' Spot to autonomously collect data in a factory environment.</li>
+		  <br>
+		  <li>Created a webRTC pipeline using gRPC to transfer point cloud data from Spot's LIDAR sensor to Oculus VR Headset, enabling a remote user to observe Spot's immediate environment in real time.</li>
+		  <br>
+		  <li>Migrated the company's robotic framework from ROS to ROS2.</li>
+		</ul>
+	  </div>
+
+<!-- 
+	<tr>
+		<td width="25%" align="center">
+			<img src='https://github.com/tanmayshankar/tanmayshankar.github.io/blob/master/data/media/GIFS/TRS.gif?raw=true' width="300">
+		</td>
+		<td valign="center" width="70%">
+			<div id="summary">
+				<papertitle>
+					Robotics Engineer,  Part-Time
+				</papertitle>                   
+				<div style="height:5px;font-size:1px;">&nbsp;</div>
+				<div style="height:5px;font-size:1px;">&nbsp;</div>
+			</div>
+			<div id="detail">
+			<i>
+				<p><p style = "text-align:justify">
+				We developed an algorithmic framework to extract different intrinsic features from human demonstrations. We are studying various features, including interactions with objects along the trajectory, analyzing the environment for interactions with the background (e.g., wiping or writing), and classifying the type of motion within a trajectory segment (e.g., shaking, rotating, or transporting).
+				</p>
+			</div>
+		</td>
+	</tr>  -->
+
+	<hr>
+	<br>
+
+
+
+	<h2>Achievements </h2>
 
 	<table width="100%" align="center" border="0" cellspacing="0" cellpadding="0">
 		  <tr>
@@ -500,13 +649,31 @@
 		  </tr>
 
 		  <u1>
-			<h4><li>Robotic Control Laboratory (EI06931) with <a href="https://www.ce.cit.tum.de/en/itr/sosnowski/" target="_blank">Dr. Stefan Sosnowski</a></li></h4>
-			<h4><li>Mathematical Analysis (MA9411)  with <a href="https://www.math.cit.tum.de/en/math/people/academic-staff/meidner-dominik/" target="_blank">Dr. Dominik Meidner</a></li></h4>
-			<h4><li>Physics for Electrical Engineers (PH9009) with <a href="https://www.professoren.tum.de/en/back-christian" target="_blank">Prof. Christian Back</a></li></h4>
-			<h4><li>Bridge Course for Mathematics (MA9001) with <a href="https://www.math.cit.tum.de/en/math/people/academic-staff/meidner-dominik/" target="_blank">Dr. Dominik Meidner</a></li></h4>
-		  </u1>
+			<li>German National Scholarship - Deutschland Stipendium,  2021, 22, 23, 24 </li>
+			<li>Heinrich and Lotte Muhlfenzl Scholarship - undergraduate research scholarship, 2023 </li>
+			<li>TUM PROMOS 2023 - merit scholarship for stay-abroad research, 2023 </li>
+			<li>Max Weber Program - nominated by the university, 2022 </li>
+			  </u1>
 
 	</table>    
+
+	<h2>Academic Service </h2>
+
+	<table width="100%" align="center" border="0" cellspacing="0" cellpadding="0">
+		  <tr>
+			<td width="100%" valign="middle">
+			</td>
+		  </tr>
+
+		  <u1>
+			<li>Introduction to Robot Learning (16-831), Carnegie Mellon University, 2025 </li>
+			<li>Robotic Control Laboratory (6-931), Technical University of Munich, 2023 </li>
+			<li>Mathematical Analysis (9-411), Technical University of Munich, 2022 </li>
+			  </u1>
+
+	</table>    
+
+
 
 
 <table width="100%" align="center" border="0" cellspacing="0" cellpadding="10">
