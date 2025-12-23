@@ -201,7 +201,7 @@
 			  	</p>
 			  	<p>
 					<font size="3">
-					<p style = "text-align:justify">Hi! I'm a Graduate Student Researcher at the 
+					<p style = "text-align:justify">Hi! I'm a MS Robotics student at the 
 						<A href="http://www.ri.cmu.edu/" target="_blank">Robotics Institute</A> at 
 						<A href="http://www.cmu.edu/" target="_blank">Carnegie Mellon University</A>, 
 						advised by <A href="http://www.gshi.me/" target="_blank">Prof. Guanya Shi</A>.
@@ -343,7 +343,12 @@
 				<div id="detail">
 				<i>
 					<p><p style = "text-align:justify">
-						Robots learning from humans, humans learning from robots. Stay tuned!
+						<b>Bridging Generative Diffusion and Reinforcement Learning for Dexterous Robot Manipulation:</b>
+						Developed a framework for learning contact-rich manipulation by retargeting human-object 
+						interactions from the ARCTIC dataset to a humanoid robot using RL environments. 
+						To enhance generalizability beyond the dataset, we are integrating a text-conditioned Diffusion 
+						Transformer with IK-guidance and Critic-informed sampling, ensuring the generative model 
+						accounts for robot kinematics and task-success metrics. Stay tuned!
 						</p>
 				</div>
 			</td>
@@ -785,14 +790,19 @@
 	<h2>Work Experience</h2>
 
 	<div class="experience">
-		<!-- <h3>Robotics Engineer (Part-Time)</h3> -->
-		<p><a href="https://www.reply.com/roboverse-reply/en" target="_blank">Roboverse Reply</a> | July 2023 - April 2024</p>
+		<h4 style="font-size: 24px !important; margin: 0 !important;"><a href="https://www.reply.com/roboverse-reply/en" target="_blank" style="font-size: 24px !important;">Roboverse Reply GmBH</a></h4>
+
+		<p> Robotics Engineer | July 2023 - April 2024</p>
 		
 		<ul>
 		  <li>Developed a perception pipeline for detecting and reporting measurements from analog gauges. 
 			Set up data-annotation, post-processing, and real-time inference of gauge measurements. 
 			Dockerized the application to integrate with Boston Dynamics' Spot to autonomously collect data 
 			in a factory environment.</li>
+		  <br>
+		  <li>Developed and deployed a sludge-detection system based on Yolo-v8 to detect amount of sludge present in outdoor water-storage tanks. 
+			Achieved an accuracy of 95% by fine-tuning a trained RESNET backbone with custom data as well as data-augmentation to account for various lighting,
+			time of the day, as well as adversarial objects.</li>
 		  <br>
 		  <li>Created a webRTC pipeline using gRPC to transfer point cloud data from Spot's 
 			LIDAR sensor to Oculus VR Headset, enabling a remote user to observe Spot's immediate 
